@@ -16,6 +16,7 @@ class UserInput extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
+    //stops the page from refreshing
     this.props.dispatch({type: 'ADD_USER', user: this.state})
   }
 
@@ -45,3 +46,5 @@ class UserInput extends Component {
 }
 
 export default connect()(UserInput);
+//wrapping a component in connect passes one function to props by default - dispatch
+
